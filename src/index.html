@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,6 +23,26 @@
     <meta property="og:image:height" content="675" />
 
     <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://via.placeholder.com/180x180.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://via.placeholder.com/32x32.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://via.placeholder.com/16x16.png"
+    />
+
+    <link
       rel="preload"
       as="font"
       type="font/woff2"
@@ -38,24 +58,6 @@
       crossorigin
     />
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://via.placeholder.com/180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://via.placeholder.com/32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://via.placeholder.com/16x16.png"
-    />
-
     <script>
       document.documentElement.classList.remove("no-js");
     </script>
@@ -66,5 +68,7 @@
   <body>
     <h1>Markup Template</h1>
     <p>With parcel bundler and auto deploy to GitHub pages</p>
+
+    <include src="./components/header/header.html"></include>
   </body>
 </html>
