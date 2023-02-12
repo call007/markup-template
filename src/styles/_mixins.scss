@@ -1,0 +1,77 @@
+@mixin button-reset {
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.25s;
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: $primaryTextColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $inputPlaceholderColor;
+    outline-offset: 2px;
+  }
+
+  &::-moz-focus-inner {
+    border: 0 !important;
+  }
+}
+
+@mixin link-reset {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s;
+
+  &:hover {
+    color: $primaryTextColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $inputPlaceholderColor;
+    outline-offset: 1px;
+  }
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin fixed-fill {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin media($media) {
+  @if $media == tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  } @else if $media == phone {
+    @media (max-width: $phone) {
+      @content;
+    }
+  }
+}
