@@ -1,15 +1,18 @@
-@import "./variables";
-@import "./mixins";
-
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
+  height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $mainFont;
   line-height: 1.5;
   color: $mainTextColor;
   background-color: $mainBgColor;
@@ -20,6 +23,12 @@ svg {
   fill: currentColor;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -27,6 +36,16 @@ p {
   & + & {
     margin-top: getRem(20);
   }
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 .text-center {
